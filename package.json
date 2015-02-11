@@ -46,7 +46,7 @@
     "start": "INSIGHT_PUBLIC_PATH=public node node_modules/.bin/insight-bitcore-api"
   },
   "dependencies": {
-    "insight-bitcore-api": "git://github.com/greatwitenorth/insight-api.git#1be89e546aaf84be6d047011e7dd5eaba5802628"
+    "insight-bitcore-api": "git://github.com/greatwitenorth/insight-api.git#94b0868b00700b260890b8912238c8713201d28c"
   },
   "devDependencies": {
     "bower": "~1.2.8",
