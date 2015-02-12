@@ -1,12 +1,12 @@
 # *insight*
 
-*insight* is an open-source bitcoin blockchain explorer with complete REST
+*insight* is an open-source auroracoin blockchain explorer with complete REST
 and websocket APIs. Insight runs in NodeJS, uses AngularJS for the
 front-end and LevelDB for storage.
 
 Check some screenshots and more details at [insight's project homepage](http://insight.is/).
 
-*Insight* project is now split into two repositories. One for the [API](https://github.com/bitpay/insight-api) and for the front-end. This repository is for the front-end, which will install the API as a NPM dependency.
+*Insight* project is now split into two repositories. One for the [API](https://github.com/greatwitenorth/insight-api) and for the front-end. This repository is for the front-end, which will install the API as a NPM dependency.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ Check some screenshots and more details at [insight's project homepage](http://i
 
     http://localhost:3001
 
-  If *insight* reports problems connecting to **bitcoind** please check the CONFIGURATION section of 
+  If *insight* reports problems connecting to **auroracoind** please check the CONFIGURATION section of 
   [insight-api README](https://github.com/bitpay/insight-api/blob/master/README.md). To set the 
   environment variables run something like:
   
