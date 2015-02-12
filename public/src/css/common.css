@@ -16,6 +16,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Ubuntu', sans-serif;
 }
 
+a {
+  color: #006859
+}
+
+a:hover, a:focus {
+  color: #001c18;
+}
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
 .ng-cloak, .x-ng-cloak,
 .ng-hide {
@@ -319,6 +327,7 @@ margin-left: 0;
 .btn-primary {
   background-color: #006859;
   border: 2px solid #004f43;
+  color: #fff;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active,
@@ -395,7 +404,7 @@ margin-left: 0;
 
 /* Set the fixed height of the footer here */
 #footer {
-  background-color: #373D42;
+  background-color: #222222;
   color: #fff;
   height: 51px;
   overflow: hidden;
