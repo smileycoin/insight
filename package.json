@@ -1,6 +1,6 @@
 {
   "name": "insight-bitcore",
-  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the bitcoin network and build your own services with it.",
+  "description": "An open-source frontend for the Insight API ported for Auroracoin. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the auroracoin network and build your own services with it.",
   "version": "0.2.5",
   "author": {
     "name": "Ryan X Charles",

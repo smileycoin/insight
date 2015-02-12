@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* Styling for the ngProgress itself */
 #ngProgress {
-  background-color: #6C9032 !important;
+  background-color: #006859 !important;
   box-shadow: none !important;
   color: #373D42 !important;
   height: 3px !important;
@@ -103,7 +103,7 @@ margin-left: 0;
 }
 
 .table-hover>tbody>tr:hover>td, .table-hover>tbody>tr:hover>th {
-  background-color: #F0F7E2;
+  background-color: #e9fff8;
 }
 .navbar { min-height: 64px; }
 .navbar-default .navbar-toggle { 
@@ -112,10 +112,10 @@ margin-left: 0;
 }
 
 .navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background-color: #373D42;}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background-color: #003f36;}
 
 .navbar-default {
-  background-color: #8DC429;
+  background-color: #222222;
   margin: 0;
   border: 0;
 }
@@ -128,12 +128,13 @@ margin-left: 0;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus {
-  background-color: #6C9032;
+  background-color: #006859;
   color: #fff;
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>.active>a:hover {
-  background-color: #fff;
+  background-color: #003f36;
+  color: #fff;
 }
 
 .navbar-form .form-group {
@@ -166,7 +167,7 @@ margin-left: 0;
 }
 
 .navbar-form .form-control {
-  background-color: #7CAD23;
+  background-color: #424242;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -201,14 +202,14 @@ margin-left: 0;
 #search { color: #fff; }
 
 #search::-webkit-input-placeholder {
-  color: #BCDF7E;
+  color: #b7b7b7;
   font-family: 'Ubuntu', sans-serif;
   font-style: italic;
   font-weight: 100;
 }
 
 #search::-moz-placeholder {
-  color: #BCDF7E;
+  color: #b7b7b7;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 100;
 }
@@ -216,7 +217,7 @@ margin-left: 0;
 .status {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  background-color: #597338;
+  background-color: #424242;
   border-radius: 3px;
   margin: 15px 0;
   padding: 8px 10px;
@@ -316,8 +317,8 @@ margin-left: 0;
   border-radius: 2px;
 }
 .btn-primary {
-  background-color: #8DC429;
-  border: 2px solid #76AF0F;
+  background-color: #006859;
+  border: 2px solid #004f43;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active,
@@ -326,9 +327,9 @@ margin-left: 0;
 .btn-success.active, .open .dropdown-toggle.btn-success,
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active,
 .btn-danger.active, .open .dropdown-toggle.btn-danger {
-  background-color: #fff;
-  border: 2px solid #ccc;
-  color: #373D42;
+  background-color: #003f36;
+  border: 2px solid #00110f;
+  color: #fff;
 }
 
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
@@ -349,6 +350,10 @@ margin-left: 0;
   border: 2px solid #6C0000;
 }
 
+.text-success {
+  color: #006859;
+}
+
 .txvalues {
   display: inline-block;
   padding: .7em 2em;
@@ -363,7 +368,7 @@ margin-left: 0;
 }
 
 .txvalues-primary {
-  background-color: #8DC429;
+  background-color: #006859;
 }
 
 .txvalues-default {
@@ -372,7 +377,7 @@ margin-left: 0;
 }
 
 .txvalues-success {
-  background-color: #2FA4D7;
+  background-color: #00bda2;
 }
 
 .txvalues-danger {
@@ -386,7 +391,7 @@ margin-left: 0;
   font-size: 14px;
   font-weight: normal;
 }
-.progress-bar-info { background-color: #8DC429; }
+.progress-bar-info { background-color: #006859; }
 
 /* Set the fixed height of the footer here */
 #footer {
@@ -459,7 +464,7 @@ margin-left: 0;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   border-top: none;
-  border: 1px solid #64920F;
+  border: 1px solid #004f43;
   padding: 10px 20px;
   position: absolute;
   text-align: center;
@@ -667,7 +672,7 @@ margin-left: 0;
 }
 
 a.v_highlight_more {
-  background-color: #F0F7E2;
+  background-color: #caf5e3;
   color: #333;
 }
 
@@ -826,7 +831,7 @@ a.v_highlight_more {
   }
   .txvalues-primary {
     background: none;
-    color: #8DC429;
+    color: #222222;
   }
   .txvalues-default {
     background: none;
