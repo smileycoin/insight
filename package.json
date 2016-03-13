@@ -30,9 +30,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/bitpay/insight/issues"
+    "url": "https://github.com/auroracointools/insight/issues"
   },
-  "homepage": "https://github.com/bitpay/insight",
+  "homepage": "https://github.com/auroracointools/insight",
   "license": "MIT",
   "keywords": [
     "insight",
@@ -46,7 +46,7 @@
     "start": "INSIGHT_PUBLIC_PATH=public node node_modules/.bin/insight-bitcore-api"
   },
   "dependencies": {
-    "insight-bitcore-api": "git://github.com/greatwitenorth/insight-api.git#36bb5a0f3d1202c3ee89baefe2c0114165c9ecb0"
+    "insight-bitcore-api": "git://github.com/auroracointools/insight-api.git"
   },
   "devDependencies": {
     "bower": "~1.2.8",
