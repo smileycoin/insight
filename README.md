@@ -11,6 +11,7 @@ Check some screenshots and more details at [insight's project homepage](http://i
 ## Prerequisites
 
 * **Node.js v0.10.x** - Download and Install [Node.js](http://www.nodejs.org/download/).
+* then create a node symlink with this command (legacy problem):  "ln -s /usr/bin/nodejs /usr/bin/node"
 
 * **NPM** - Node.js package manager, should be automatically installed when you get node.js.
 
