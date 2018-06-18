@@ -199,6 +199,10 @@ margin-left: 0;
 
 #search-form { color: #343630; }
 
+::placeholder {
+  color: #0c0c0b !important;
+}
+
 #search.loading {
   background-image: url('/img/loading.gif');
   background-position: 5px center;
