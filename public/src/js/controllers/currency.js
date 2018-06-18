@@ -16,8 +16,8 @@ angular.module('insight.currency').controller('CurrencyController',
       if (!isNaN(value) && typeof value !== 'undefined' && value !== null) {
         if (value === 0.00000000) return '0 ' + this.symbol; // fix value to show
 
-        var response;
-
+        var response = value;
+        /*
         if (this.symbol === 'USD') {
           response = _roundFloat((value * this.factor), 2);
         } else if (this.symbol === 'mAUR') {
@@ -30,6 +30,7 @@ angular.module('insight.currency').controller('CurrencyController',
           this.factor = 1;
           response = value;
         }
+        */
         // prevent sci notation
         if (response < 1e-7) response=response.toFixed(8);
 
@@ -47,11 +48,12 @@ angular.module('insight.currency').controller('CurrencyController',
         Currency.get({}, function(res) {
           $rootScope.currency.factor = $rootScope.currency.bitstamp = res.data.bitstamp;
         });
-      } else if (currency === 'mAUR') {
+      } /*else if (currency === 'mAUR') {
         $rootScope.currency.factor = 1000;
       } else if (currency === 'bits') {
         $rootScope.currency.factor = 1000000;
-      } else {
+      } */
+      else {
         $rootScope.currency.factor = 1;
       }
     };
