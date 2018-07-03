@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('insight.transactions').controller('transactionsController',
-function($scope, $rootScope, $routeParams, $location, Global, Transaction, TransactionsByBlock, TransactionsByAddress) {
+function($scope, $rootScope, $routeParams, $location, Global, Transaction, TransactionsByBlock, TransactionsByAddress, Sync) {
   $scope.global = Global;
   $scope.loading = false;
   $scope.loadedBy = null;
@@ -161,7 +161,7 @@ function($scope, $rootScope, $routeParams, $location, Global, Transaction, Trans
     $scope.v_index = parseInt($routeParams.v_index);
     $scope.itemsExpanded = true;
   }
-  
+
   //Init without txs
   $scope.txs = [];
 
