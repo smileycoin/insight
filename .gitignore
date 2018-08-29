@@ -51,3 +51,7 @@ po/*
 #IDE stuff
 .idea
 atlassian-ide-plugin.xml
+
+.local-conf
+/n/
+/npm-debug.log*
