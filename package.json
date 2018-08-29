@@ -30,9 +30,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/harriorri/insight/issues"
+    "url": "https://github.com/smileycoin/insight/issues"
   },
-  "homepage": "https://github.com/harriorri/insight",
+  "homepage": "https://github.com/smileycoin/insight",
   "license": "MIT",
   "keywords": [
     "insight",
@@ -46,7 +46,7 @@
     "start": "INSIGHT_PUBLIC_PATH=public node node_modules/.bin/insight-bitcore-api"
   },
   "dependencies": {
-    "insight-bitcore-api": "git://github.com/harriorri/insight-api.git"
+    "insight-bitcore-api": "git://github.com/smileycoin/insight-api.git"
   },
   "devDependencies": {
     "bower": "~1.2.8",
