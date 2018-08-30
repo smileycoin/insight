@@ -52,6 +52,7 @@ po/*
 .idea
 atlassian-ide-plugin.xml
 
-.local-conf
+/.local-conf
 /n/
 /npm-debug.log*
+/.insight

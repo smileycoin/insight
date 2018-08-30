@@ -21,11 +21,14 @@ Start in foreground with:
 Configure the instance by writing a .local-conf:
 
     cat <<EOF > .local-conf
+    PROJECT_MODE="production"
+
     INSIGHT_PORT=3000
     BITCOIND_USER=smileycoinrpc
     BITCOIND_PASS=(RPC password)
     BITCOIND_HOST=127.0.0.1
     BITCOIND_PORT=14242
+    BITCOIND_DATADIR=(Path to .smileycoin)
     EOF
 
 Install:

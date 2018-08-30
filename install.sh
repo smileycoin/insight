@@ -15,7 +15,7 @@ set -ex
 PROJECT_PATH="${PROJECT_PATH-$(dirname "$(readlink -f "$0")")}"  # The full project path, e.g. /srv/tutor-web.beta
 PROJECT_NAME="${PROJECT_NAME-$(basename ${PROJECT_PATH})}"  # The project directory name, e.g. tutor-web.beta
 PROJECT_MODE="${PROJECT_MODE-development}"  # The project mode, development or production
-PROJECT_VARS="PROJECT_|^WWW_|^BACKEND_|^BITCOIND_|^_INSIGHT"
+PROJECT_VARS="PROJECT_|^WWW_|^BACKEND_|^BITCOIND_|^INSIGHT_"
 
 WWW_SERVER_NAME="${WWW_SERVER_NAME-$(hostname --fqdn)}"  # The server_name(s) NGINX responds to
 WWW_CERT_PATH="${WWW_CERT_PATH-}"  # e.g. /etc/nginx/ssl/certs
@@ -30,6 +30,8 @@ else
 fi
 BACKEND_MAILSENDER="${BACKEND_MAILSENDER-noreply@$WWW_SERVER_NAME}"
 
+INSIGHT_DB="${INSIGHT_DB-${PROJECT_PATH}/.insight}"
+
 set | grep -E "${PROJECT_VARS}"
 
 # If just used to execute a server (in development mode, e.g.) do that
@@ -39,6 +41,11 @@ set | grep -E "${PROJECT_VARS}"
 # Systemd unit file to run backend
 set | grep -E "${PROJECT_VARS}" > "/etc/systemd/system/${PROJECT_NAME}.env"
 chmod 600 -- "/etc/systemd/system/${PROJECT_NAME}.env"
+
+# Create a home directory for app to use
+mkdir -p -- "${INSIGHT_DB}"
+chown -R ${BACKEND_USER}:${BACKEND_GROUP} -- "${INSIGHT_DB}"
+chown ${BACKEND_USER}:${BACKEND_GROUP} -- "${PROJECT_PATH}/peerdb.json"
 
 systemctl | grep -q "${PROJECT_NAME}.service" && systemctl stop ${PROJECT_NAME}.service
 cat <<EOF > /etc/systemd/system/${PROJECT_NAME}.service
@@ -132,7 +139,10 @@ cat <<EOF >> /etc/nginx/sites-available/${PROJECT_NAME}
     gzip        on;
 
     location / {
-        proxy_pass  http://localhost:${BACKEND_SOCKET}/;
+        proxy_pass  http://localhost:${INSIGHT_PORT}/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade         \$http_upgrade;
+        proxy_set_header Connection      "upgrade";
         proxy_set_header Host            \$host;
         proxy_set_header X-Forwarded-For \$remote_addr;
     }
