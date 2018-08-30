@@ -30,7 +30,10 @@ else
 fi
 BACKEND_MAILSENDER="${BACKEND_MAILSENDER-noreply@$WWW_SERVER_NAME}"
 
+INSIGHT_PORT="${INSIGHT_PORT-3000}"
+INSIGHT_NETWORK="${INSIGHT_NETWORK-livenet}"
 INSIGHT_DB="${INSIGHT_DB-${PROJECT_PATH}/.insight}"
+INSIGHT_PEERDB="${INSIGHT_PEERDB-${PROJECT_PATH}/peerdb.json}"
 
 set | grep -E "${PROJECT_VARS}"
 
@@ -45,7 +48,9 @@ chmod 600 -- "/etc/systemd/system/${PROJECT_NAME}.env"
 # Create a home directory for app to use
 mkdir -p -- "${INSIGHT_DB}"
 chown -R ${BACKEND_USER}:${BACKEND_GROUP} -- "${INSIGHT_DB}"
-chown ${BACKEND_USER}:${BACKEND_GROUP} -- "${PROJECT_PATH}/peerdb.json"
+
+touch -- "${INSIGHT_PEERDB}"
+chown ${BACKEND_USER}:${BACKEND_GROUP} -- "${INSIGHT_PEERDB}"
 
 systemctl | grep -q "${PROJECT_NAME}.service" && systemctl stop ${PROJECT_NAME}.service
 cat <<EOF > /etc/systemd/system/${PROJECT_NAME}.service
