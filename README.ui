@@ -22,6 +22,8 @@ Configure the instance by writing a .local-conf:
 
     cat <<EOF > .local-conf
     PROJECT_MODE="production"
+    WWW_SERVER_NAME="blocks.smileyco.in"
+    WWW_CERT_PATH="/etc/nginx/ssl"
 
     BITCOIND_USER=smileycoinrpc
     BITCOIND_PASS=(RPC password)
