@@ -60,7 +60,7 @@ After=network.target
 
 [Service]
 ExecStart=${PROJECT_PATH}/n/versions/node/0.10.48/bin/npm start
-WorkingDirectory=${PROJECT_PATH}
+WorkingDirectory=${INSIGHT_DB}
 EnvironmentFile=/etc/systemd/system/${PROJECT_NAME}.env
 User=${BACKEND_USER}
 Group=${BACKEND_GROUP}
